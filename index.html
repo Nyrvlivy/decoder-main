@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>@decoder</title>
+  </head>
+
+  <body>
+    <main>
+      <div class="container">
+        <div class="container_content">
+          <form class="container_form">
+            <textarea
+              rows="1"
+              cols="10"
+              type="text"
+              name="decrypt"
+              class="container_form_textarea"
+              id="form_text"
+              placeholder="Insert your text here"
+            ></textarea>
+            <p id="input_warning">
+              <img
+                src="./assets/images/important-icon.png"
+                alt="Important icon"
+                id="important_icon"
+              />
+              Only lowercase letters without accents.
+            </p>
+          </form>
+        </div>
+
+        <div class="container_buttons">
+          <button
+            onclick="encrypt()"
+            class="container_buttons_button"
+            id="encrypt_button"
+          >
+            Encrypt
+          </button>
+          <button
+            onclick="decrypt()"
+            class="container_buttons_button"
+            id="decrypt_button"
+          >
+            Decrypt
+          </button>
+        </div>
+
+        <div class="container_result">
+          <div class="container_result_box">
+            <div class="container_result_box_before" id="result_before">
+              <img
+                src="./assets/images/unown.png"
+                alt="A Pokémon called Unown"
+                id="img_unown"
+              />
+              <h1 class="container_result_box_before" id="before_title">
+                Uuuunoooown
+              </h1>
+              <p class="container_result_box_before" id="before_subtitle">
+                No messages to decode.
+              </p>
+            </div>
+
+            <div class="container_result_box_after">
+              <textarea
+                class="container_result_box_after"
+                id="encrypted_text"
+                readonly
+              ></textarea>
+              <button
+                onclick="copy()"
+                class="container_result_button"
+                id="copy_button"
+              >
+                <img
+                  id="copy_icon"
+                  src="./assets/images/copy-icon.png"
+                  alt="Copy icon"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="sign">
+      <a href="https://github.com/nyrvlivy" id="developed_by">
+        Developed by Bruna Massi © 2024
+      </a>
+    </footer>
+
+    <script src="/scripts/app.js" defer></script>
+  </body>
+</html>
